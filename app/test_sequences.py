@@ -1,6 +1,7 @@
+import numpy as np
+
+
 def eno(a, b, x0, y0, n):
-    a = a
-    b = b
     x = x0
     y = y0
 
@@ -9,4 +10,13 @@ def eno(a, b, x0, y0, n):
         x = 1 - a * x ** 2 - b * y
         y = x
         result.append(y)
+    return result
+
+
+def linear(a, b, x0, n):
+    result = []
+    x = x0
+    for i in range(n):
+        x = a + b * x
+        result.append(x)
     return result
