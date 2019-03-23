@@ -20,3 +20,12 @@ def linear(a, b, x0, n):
         x = a + b * x
         result.append(x)
     return result
+
+
+def logistic(x0, lamb, n):
+    x = x0
+    result = []
+    for i in range(n):
+        x = 1 - lamb * x * x
+        result.append(x)
+    return result
